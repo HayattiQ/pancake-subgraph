@@ -11,7 +11,7 @@
     "build": "graph build subgraph.yaml",
     "deploy:goerli": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/user-position-v3-goerli subgraph.yaml",
     "deploy:chapel": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/user-position-v3-chapel subgraph.yaml",
-    "deploy:eth": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/user-position-v3-eth subgraph.yaml",
-    "deploy:bsc": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/user-position-v3-bsc subgraph.yaml"
+    "deploy:eth": "graph deploy --node http://${GRAPH_LOCAL_IP}:8020/ --ipfs http://${GRAPH_LOCAL_IP}:5001 pancakeswap/user-position-v3-eth subgraph.yaml",
+    "deploy": "graph deploy --node http://${GRAPH_LOCAL_IP}:8020/ --ipfs http://${GRAPH_LOCAL_IP}:5001 pancakeswap/user-position-v3 subgraph.yaml"
   }
 }
