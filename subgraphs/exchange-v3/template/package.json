@@ -10,6 +10,7 @@
     "auth": "graph auth --product hosted-service SUBGRAPH_KEY",
     "codegen": "graph codegen subgraph.yaml",
     "build": "graph build subgraph.yaml",
+    "deploy:zkatana" : "graph deploy --node http://${GRAPH_LOCAL_IP}:8020/ --ipfs http://${GRAPH_LOCAL_IP}:5001 pancakeswap/exchange-v3-zkatana subgraph.yaml",
     "deploy:goerli": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/exchange-v3-goerli subgraph.yaml",
     "deploy:chapel": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/exchange-v3-chapel subgraph.yaml",
     "deploy:eth": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ pancakeswap/exchange-v3-eth subgraph.yaml",
